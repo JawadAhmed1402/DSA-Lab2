@@ -2,8 +2,10 @@
 using namespace std;
 
 int main() {
-    const int size = 20;   
-    int salArray[size];
+    int size;
+    cout<<"Enter number of empolyee whom salary you want to enter: ";
+    cin>>size;
+    int *salArray = new int [size];
 
     // Input salaries
     for (int i = 0; i < size; i++) {
@@ -21,6 +23,7 @@ int main() {
         cout << salArray[i] << " ";
     }
     cout << endl;
-
+    delete [] salArray;
     return 0;
+
 }   
